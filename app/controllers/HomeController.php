@@ -20,4 +20,46 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
-}
+	public function showLogin()
+	{
+		// show the form
+	   	return View::make('login');
+	}
+		
+	public function doLogin()
+	{
+	 // process the form
+	$rules = array(
+		'email'    => 'required|email', // make sure the email is an actual email
+			'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be
+
+	);
+
+	$validator = Validator::make(Input::all(), $rules);
+
+	if ($validator->fails()) {
+		    return Redirect::to('login')
+				        ->withErrors($validator) // send back all errors to the login form
+						        ->withInput(Input::except('password')); // send back the input (not the password)
+
+	} else {
+		
+		$userdata = array(
+			'email'     => Input::get('email'),
+			'password'  => Input::get('password')
+		);
+
+		if (Auth::attempt($userdata)) {
+
+			echo "Yay!";
+		}
+		else {
+			dd($Input::get());
+			echo "fail, go away!";
+		}
+	}
+
+
+
+	}
+	}
