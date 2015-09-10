@@ -54,7 +54,7 @@ class HomeController extends BaseController {
 				echo "Yay!";
 			}
 			else {
-				dd($Input::get());
+				dd(Input::get());
 				echo "fail, go away!";
 			}
 		}
