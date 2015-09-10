@@ -1,0 +1,9 @@
+{
+  "name": "c895-hifi",
+  "version": "0.0.1",
+  "dependencies": {
+	"startbootstrap-sb-admin-2": "*",
+	"jquery": "~1.10.2"
+  },
+  "private": true
+}
