@@ -2,7 +2,7 @@
 
 Purpose
 -------
-This is a project created for the [AWS Hackathon](http://www.pnwphp.com/events-hackathon) at the inagural [PNW PHP Conference](http://www.pnwphp.com/)
+This is a project created for the [AWS Hackathon](http://www.pnwphp.com/events-hackathon) at the inaugural [PNW PHP Conference](http://www.pnwphp.com/)
 
 Links
 -----
