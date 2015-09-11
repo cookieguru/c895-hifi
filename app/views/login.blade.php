@@ -43,8 +43,9 @@
                             <!-- if there are login errors, show them here -->
                             @if($errors->has())
                             <p class="bg-danger img-thumbnail table">
-                                {{ $errors->first('email') }}
-                                {{ $errors->first('password') }}
+                                @foreach ($errors->all() as $error)
+                                    <div>{{ $error }}</div>
+                                @endforeach
                             </p>
                             @endif
 
