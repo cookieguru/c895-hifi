@@ -24,5 +24,8 @@ Route::get('/logout', array('uses' => 'HomeController@doLogout'));
 if (Session::has('loggedIn')) {
 	Route::get('/upload/', array('uses' => 'UploadController@mainAction'));
 	Route::post('/upload', array('uses' => 'UploadController@doAction'));
+	Route::get('/storage/fetch/{key}', function ($key) {
+		(new StorageController())->doFetch($key);
+	});
 }
 Route::get('/list', array('uses' => 'UploadController@listAction'));

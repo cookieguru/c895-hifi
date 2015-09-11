@@ -89,7 +89,7 @@
 									</thead>
 									<tbody>
 										@foreach($files as $file)
-											<tr><td>{{ $file }}</td></tr>
+											<tr><td><a href="/storage/fetch/{{ $file['uri'] }}">{{ $file['uri'] }}</a></td></tr>
 										@endforeach
 									</tbody>
 							</div>
