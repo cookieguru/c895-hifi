@@ -102,7 +102,7 @@
 
 </div>
 
-{{ HTML::script('bower_components/jquery/dist/jquery.min.js') }}
+{{ HTML::script('bower_components/jquery/jquery.min.js') }}
 {{ HTML::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
 {{ HTML::script('bower_components/metisMenu/dist/metisMenu.min.js') }}
 {{ HTML::script('bower_components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js') }}
