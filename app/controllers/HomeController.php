@@ -68,8 +68,7 @@ class HomeController extends BaseController {
 	// Logout
 	public function doLogout() 
 	{
-		Session::pull('loggedIn','loggedIn');
-		Session::end();
+		Session::forget('loggedIn');
 		return Redirect::to('login');
 	}
 
