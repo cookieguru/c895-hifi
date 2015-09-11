@@ -28,4 +28,10 @@ if (Session::has('loggedIn')) {
 		(new StorageController())->doFetch($key);
 	});
 }
+else {
+	Route::get('/upload/', function()
+	{
+		return Redirect::to('/login');		
+	});
+}
 Route::get('/list', array('uses' => 'UploadController@listAction'));
