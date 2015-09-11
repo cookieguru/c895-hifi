@@ -23,4 +23,20 @@ class StorageController extends BaseController {
         exit;
     }
 
+    public function doDelete($key) {
+        /**
+         * @var \Aws\Sdk $aws
+         */
+        $aws = App::make('Providers\AwsServiceProvider');
+        $s3Client = $aws->createS3();
+
+        $result = $s3Client->deleteObject([ 'Bucket' => 'test-c895', 'Key' => "uploads/$key" ]);
+
+        if($result) {
+            return Redirect::to('list');
+        } else {
+            throw new \Aws\S3\Exception\S3Exception;
+        }
+    }
+
 }

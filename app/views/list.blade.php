@@ -80,15 +80,19 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<table class="table table-striped">
+								<table class="table table-striped table-hover">
 									<thead>
-										<th>Key</th>
+										<th>Key</th><th></th>
 									</thead>
 									<tbody>
 										@foreach($files as $file)
-											<tr><td><a href="/storage/fetch/{{ $file['uri'] }}">{{ $file['uri'] }}</a></td></tr>
+											<tr>
+												<td><a href="/storage/fetch/{{ $file['uri'] }}">{{ $file['uri'] }}</a></td>
+												<td><a href="/storage/delete/{{ $file['uri'] }}"><span class="glyphicon glyphicon-trash"></span></a></td>
+											</tr>
 										@endforeach
 									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
