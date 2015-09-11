@@ -53,6 +53,8 @@ class HomeController extends BaseController {
 			);
 
 			if ($userdata['email'] == 'test@tester.com' && $userdata['password'] == 'password') {
+				Session::start();
+				Session::put('key', '123456789');
 				return Redirect::to('upload');
 			}
 			else {
@@ -66,6 +68,7 @@ class HomeController extends BaseController {
 	// Logout
 	public function doLogout() 
 	{
+		Session::end();
 		return Redirect::to('login');
 	}
 
