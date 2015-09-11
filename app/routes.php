@@ -30,11 +30,11 @@ if (Session::has('loggedIn')) {
 	Route::get('/storage/delete/{key}', function ($key) {
 		(new StorageController())->doDelete($key);
 	});
+	Route::get('/list', array('uses' => 'UploadController@listAction'));
 }
 else {
-	Route::get('/upload/', function()
+	Route::any('/upload/', function()
 	{
-		return Redirect::to('/login');		
+		return Redirect::to('/login');
 	});
 }
-Route::get('/list', array('uses' => 'UploadController@listAction'));
