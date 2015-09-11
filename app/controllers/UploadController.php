@@ -47,7 +47,7 @@ class UploadController extends BaseController
 		]);
 
 		foreach ($results->search('Contents[].Key') as $key) {
-			'<p>' . $key . '</p>';
+			echo '<p>' . $key . '</p>';
 		}
 
 	}
