@@ -57,7 +57,6 @@ class HomeController extends BaseController {
 
 			}
 			else {
-				echo "fail, go away!";
 				return Redirect::to('login')
 					->withErrors('You do not exist, go away!')
 					->withInput(Input::except('password'));
