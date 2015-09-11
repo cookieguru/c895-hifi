@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Upload</title>
+	<title>Upload | C89.5 Hi-Fi</title>
 
 	{{ HTML::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
 
