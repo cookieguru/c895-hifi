@@ -15,23 +15,26 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	// Show the welcome page
 	public function showWelcome()
 	{
 		return View::make('hello');
 	}
 
+	// Show login page view
 	public function showLogin()
 	{
 		// show the form
 	   	return View::make('login');
 	}
 		
+	// Login
 	public function doLogin()
 	{
 		 // process the form
 		$rules = array(
-			'email' => 'required|email', // make sure the email is an actual email
-			'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be
+			'email' => 'required', // make sure the email is an actual email
+			'password' => 'required' // password can only be alphanumeric and has to be
 
 		);
 
@@ -49,20 +52,22 @@ class HomeController extends BaseController {
 				'password'  => Input::get('password')
 			);
 
-			if (Auth::attempt($userdata)) {
+			if ($userdata['email'] == 'test@tester.com' && $userdata['password'] == 'password') {
+				return Redirect::to('upload');
 
-				echo "Yay!";
 			}
 			else {
-				dd(Input::get());
 				echo "fail, go away!";
+				return Redirect::to('login')
+					->withErrors('You do not exist, go away!')
+					->withInput(Input::except('password'));
 			}
 		}
 
 	}
+	// Logout
 	public function doLogout() 
 	{
-		Auth::logout();
 		return Redirect::to('login');
 	}
 
