@@ -49,12 +49,12 @@
                             @endif
 
                             <div class="form-group">
-                                {{ Form::text('email', Input::old('email'), array('placeholder' => 'someone@somewhere.com')) }}
+                                <input placeholder="someone@somewhere.com" name="email" type="text" class="form-control" autofocus>
                             </div>
                             <div class="form-group">
-                                {{ Form::password('password')  }}
+                                <input name="password" type="password" value="" class="form-control">
                             </div>
-                            <p>{{ Form::submit('Submit!') }}</p>
+                            <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
                         </fieldset>
                     {{ Form::close() }}
                 </div>
