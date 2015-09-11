@@ -11,18 +11,18 @@
 
 	<title>Upload</title>
 
-	<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	{{ HTML::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
 
-	<link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+	{{ HTML::style('bower_components/metisMenu/dist/metisMenu.min.css') }}
 
-	<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+	{{ HTML::style('bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css') }}
 
-	<link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	{{ HTML::style('bower_components/font-awesome/css/font-awesome.min.css') }}
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	{{ HTML::script('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') }}
+	{{ HTML::script('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') }}
 	<![endif]-->
 
 </head>
@@ -39,7 +39,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">SB Admin v2.0</a>
+			<a class="navbar-brand" href="/">C89.5 HiFi</a>
 		</div>
 
 		<ul class="nav navbar-top-links navbar-right">
@@ -48,7 +48,7 @@
 					<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
 				</a>
 				<ul class="dropdown-menu dropdown-user">
-					<li><a href="/"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+					<li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 					</li>
 				</ul>
 			</li>
@@ -108,10 +108,10 @@
 
 </div>
 
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-<script src="../dist/js/sb-admin-2.js"></script>
+{{ HTML::script('bower_components/jquery/dist/jquery.min.js') }}
+{{ HTML::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
+{{ HTML::script('bower_components/metisMenu/dist/metisMenu.min.js') }}
+{{ HTML::script('bower_components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js') }}
 
 </body>
 
