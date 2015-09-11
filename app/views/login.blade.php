@@ -46,8 +46,8 @@
                                 @foreach ($errors->all() as $error)
                                     <div>{{ $error }}</div>
                                 @endforeach
-                            </p>
                             @endif
+                            </p>
 
                             <div class="form-group">
                                 <input placeholder="someone@somewhere.com" name="email" type="text" class="form-control" autofocus>
