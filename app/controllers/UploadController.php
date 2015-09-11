@@ -48,5 +48,6 @@ class UploadController extends BaseController
 
 		View::share('files', $results->search('Contents[].Key'));
 
+		return View::make('list');
 	}
 }
