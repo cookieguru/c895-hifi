@@ -30,7 +30,7 @@ class UploadController extends BaseController
 
 			unlink($path);
 
-			Redirect::to('list');
+			return Redirect::to('list');
 		}
 	}
 
