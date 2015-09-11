@@ -88,7 +88,7 @@
 										@foreach($files as $file)
 											<tr>
 												<td>{{ $file['uri'] }}</td>
-												<td><a href="/storage/fetch/{{ $file['uri'] }}" onclick="jQuery('<audio controls><source src=\\"' + this.href + '\\" type=\\"audio/mp4a\\"></audio>').insertAfter(this);return false"><span class="glyphicon glyphicon-play-circle"></span></a></td>
+												<td><a href="/storage/fetch/{{ $file['uri'] }}" class="play"><span class="glyphicon glyphicon-play-circle"></span></a></td>
 												<td><a href="/storage/delete/{{ $file['uri'] }}"><span class="glyphicon glyphicon-trash"></span></a></td>
 											</tr>
 										@endforeach
@@ -108,6 +108,7 @@
 {{ HTML::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
 {{ HTML::script('bower_components/metisMenu/dist/metisMenu.min.js') }}
 {{ HTML::script('bower_components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js') }}
+{{ HTML::script('js/admin.js') }}
 
 </body>
 
