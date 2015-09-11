@@ -12,8 +12,8 @@ class StorageController extends BaseController {
 
         $result = $s3Client->getObject([ 'Bucket' => 'test-c895', 'Key' => "uploads/{$key}" ]);
 
-        header('Content-type: audio/mp4');
-        header("Content-Disposition: attachment; filename=$key");
+        header('Content-type: application/octet-stream');
+        header("Content-Disposition: attachment; filename={$key}");
         header('Expires: 0');
         header('Pragma: no-cache');
 
