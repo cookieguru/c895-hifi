@@ -41,10 +41,12 @@
                     {{ Form::open(array('url' => 'login')) }}
                         <fieldset>
                             <!-- if there are login errors, show them here -->
+                            @if($errors->has())
                             <p class="bg-danger img-thumbnail table">
                                 {{ $errors->first('email') }}
                                 {{ $errors->first('password') }}
                             </p>
+                            @endif
 
                             <div class="form-group">
                                 {{ Form::text('email', Input::old('email'), array('placeholder' => 'someone@somewhere.com')) }}
