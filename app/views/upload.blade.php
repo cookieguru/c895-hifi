@@ -83,7 +83,7 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form role="form" method="post" action="/upload/" enctype="multipart/form-data">
+								<form role="form" method="post" action="/upload" enctype="multipart/form-data">
 									<div class="form-group">
 										<label for="input-name">Name</label>
 										<input class="form-control" placeholder="Name of show" id="input-name">
@@ -94,7 +94,7 @@
 									</div>
 									<div class="form-group">
 										<label>File input</label>
-										<input type="file">
+										<input type="file" name="audio">
 									</div>
 									<button type="submit" class="btn btn-primary">Upload now</button>
 								</form>
