@@ -43,18 +43,19 @@
                             <!-- if there are login errors, show them here -->
                             @if($errors->has())
                             <p class="bg-danger img-thumbnail table">
-                                {{ $errors->first('email') }}
-                                {{ $errors->first('password') }}
+                                @foreach ($errors->all() as $error)
+                                    <div>{{ $error }}</div>
+                                @endforeach
                             </p>
                             @endif
 
                             <div class="form-group">
-                                {{ Form::text('email', Input::old('email'), array('placeholder' => 'someone@somewhere.com')) }}
+                                <input placeholder="someone@somewhere.com" name="email" type="text" class="form-control" autofocus>
                             </div>
                             <div class="form-group">
-                                {{ Form::password('password')  }}
+                                <input name="password" type="password" value="" class="form-control">
                             </div>
-                            <p>{{ Form::submit('Submit!') }}</p>
+                            <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
                         </fieldset>
                     {{ Form::close() }}
                 </div>
