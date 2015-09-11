@@ -27,6 +27,9 @@ if (Session::has('loggedIn')) {
 	Route::get('/storage/fetch/{key}', function ($key) {
 		(new StorageController())->doFetch($key);
 	});
+	Route::get('/storage/delete/{key}', function ($key) {
+		(new StorageController())->doDelete($key);
+	});
 }
 else {
 	Route::get('/upload/', function()
