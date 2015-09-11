@@ -44,10 +44,10 @@
                             @if($errors->has())
                             <p class="bg-danger img-thumbnail table">
                                 @foreach ($errors->all() as $error)
-                                    <div>{{ $error }}</div>
+                                    {{ $error }}<br>
                                 @endforeach
-                            @endif
                             </p>
+                            @endif
 
                             <div class="form-group">
                                 <input placeholder="someone@somewhere.com" name="email" type="text" class="form-control" autofocus>
