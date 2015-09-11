@@ -88,7 +88,7 @@
 										@foreach($files as $file)
 											<tr>
 												<td>{{ $file['uri'] }}</td>
-												<td><a href="/storage/fetch/{{ $file['uri'] }}" onclick="$('<audio controls><source src=\\"' + this.href + '\\" type=\\"audio/mp4a\\"></audio>').insertAfter(this);return false"><span class="glyphicon glyphicon-play-circle"></span></a></td>
+												<td><a href="/storage/fetch/{{ $file['uri'] }}" onclick="jQuery('<audio controls><source src=\\"' + this.href + '\\" type=\\"audio/mp4a\\"></audio>').insertAfter(this);return false"><span class="glyphicon glyphicon-play-circle"></span></a></td>
 												<td><a href="/storage/delete/{{ $file['uri'] }}"><span class="glyphicon glyphicon-trash"></span></a></td>
 											</tr>
 										@endforeach
