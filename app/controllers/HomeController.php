@@ -54,7 +54,6 @@ class HomeController extends BaseController {
 
 			if ($userdata['email'] == 'test@tester.com' && $userdata['password'] == 'password') {
 				return Redirect::to('upload');
-
 			}
 			else {
 				return Redirect::to('login')

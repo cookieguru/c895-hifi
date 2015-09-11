@@ -26,4 +26,6 @@ Route::post('/login', array('uses' => 'HomeController@doLogin'));
 // route to logout
 Route::get('/logout', array('uses' => 'HomeController@doLogout'));
 
-Route::get('/upload/', array('uses' => 'UploadController@mainAction'));
+if(Auth::check()) {
+	Route::get('/upload/', array('uses' => 'UploadController@mainAction'));
+}
