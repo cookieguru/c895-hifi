@@ -85,8 +85,8 @@
 							<div class="col-lg-12">
 								<table class="table table-striped">
 									<thead>
-										<th>URL</th>
-									</thead>>
+										<th>Key</th>
+									</thead>
 									<tbody>
 										@foreach($files as $file)
 											<tr><td>{{ $file }}</td></tr>
