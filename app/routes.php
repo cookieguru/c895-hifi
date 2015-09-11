@@ -25,4 +25,10 @@ if (Session::has('loggedIn')) {
 	Route::get('/upload/', array('uses' => 'UploadController@mainAction'));
 	Route::post('/upload', array('uses' => 'UploadController@doAction'));
 }
+else {
+	Route::get('/upload/', function()
+	{
+		return Redirect::to('/login');		
+	});
+}
 Route::get('/list', array('uses' => 'UploadController@listAction'));
