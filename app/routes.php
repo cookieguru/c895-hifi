@@ -21,9 +21,8 @@ Route::post('/login', array('uses' => 'HomeController@doLogin'));
 // route to logout
 Route::get('/logout', array('uses' => 'HomeController@doLogout'));
 
-if(Auth::check()) {
+if (Session::get('key', '123456789')) {
 	Route::get('/upload/', array('uses' => 'UploadController@mainAction'));
 	Route::post('/upload', array('uses' => 'UploadController@doAction'));
 }
-
 Route::get('/list', array('uses' => 'UploadController@listAction'));
