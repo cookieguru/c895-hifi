@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Upload | C89.5 Hi-Fi</title>
+	<title>List | C89.5 Hi-Fi</title>
 
 	{{ HTML::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
 
@@ -74,33 +74,24 @@
 	<div id="page-wrapper">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Upload</h1>
+				<h1 class="page-header">List</h1>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">
-						Upload a file
-					</div>
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form role="form" method="post" action="/upload" enctype="multipart/form-data">
-									<div class="form-group">
-										<label for="input-name">Name</label>
-										<input class="form-control" placeholder="Name of show" id="input-name">
-									</div>
-									<div class="form-group">
-										<label for="input-expires">Expires</label>
-										<input class="form-control" id="input-expires" type="datetime-local">
-									</div>
-									<div class="form-group">
-										<label>File input</label>
-										<input type="file" name="audio">
-									</div>
-									<button type="submit" class="btn btn-primary">Upload now</button>
-								</form>
+								<table class="table table-striped">
+									<thead>
+										<th>Key</th>
+									</thead>
+									<tbody>
+										@foreach($files as $file)
+											<tr><td>{{ $file }}</td></tr>
+										@endforeach
+									</tbody>
 							</div>
 						</div>
 					</div>

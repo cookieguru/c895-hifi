@@ -46,9 +46,8 @@ class UploadController extends BaseController
 			'Bucket' => 'test-c895',
 		]);
 
-		foreach ($results->search('Contents[].Key') as $key) {
-			echo '<p>' . $key . '</p>';
-		}
+		View::share('files', $results->search('Contents[].Key'));
 
+		return View::make('list');
 	}
 }
